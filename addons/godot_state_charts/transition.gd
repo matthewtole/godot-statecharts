@@ -89,7 +89,7 @@ func evaluate_delay() -> float:
 
 	var result = ExpressionUtil.evaluate_expression("delay of " + str(get_path()), parent_state._chart, delay_in_seconds, 0.0)	
 	if typeof(result) != TYPE_FLOAT:
-		push_error("Expression result is not a boolean. Returning false.")
+		push_error("Expression result is not a float. Returning 0.0.")
 		return 0.0
 
 	return result
